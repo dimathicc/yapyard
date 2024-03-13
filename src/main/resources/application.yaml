@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: YapYard
+  datasource:
+    url: jdbc:postgresql://localhost:5432/yapyard
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
